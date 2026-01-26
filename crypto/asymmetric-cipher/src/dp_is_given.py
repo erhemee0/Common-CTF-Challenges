@@ -1,3 +1,19 @@
+"""
+RSA decryption when dp (d mod p-1) is leaked.
+
+Category: Crypto > RSA
+
+Description:
+    When dp = d mod (p-1) is known along with n, e, and ciphertext c, we can
+    recover the private key d by iterating through possible values and checking
+    if n is divisible by the computed prime p.
+
+Usage:
+    python dp_is_given.py
+
+Dependencies:
+    - pycryptodome
+"""
 from Crypto.Util.number import *
 
 

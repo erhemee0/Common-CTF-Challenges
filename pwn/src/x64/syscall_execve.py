@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 direct syscall ROP chain to execute /bin/sh.
+
+Category: Pwn > ROP
+
+Description:
+    Clean ROP chain exploit using pop gadgets to set rax=0x3b (execve),
+    rdi=&"/bin/sh", rsi=0, rdx=0, then syscall. Classic syscall pattern.
+
+Usage:
+    python syscall_execve.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF('main')

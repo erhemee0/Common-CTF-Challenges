@@ -1,3 +1,20 @@
+"""
+Factor RSA modulus N when p and q are close using Fermat's method.
+
+Category: Crypto > RSA
+
+Description:
+    When the two prime factors p and q of N are close to each other, Fermat's
+    factorization method can efficiently find them. The algorithm searches for
+    a and b such that N = a^2 - b^2 = (a+b)(a-b).
+
+Usage:
+    python fermats_factor_attack.py
+
+Dependencies:
+    - pycryptodome
+    - gmpy2
+"""
 from Crypto.Util.number import long_to_bytes, inverse
 from gmpy2 import isqrt, square, is_square
 

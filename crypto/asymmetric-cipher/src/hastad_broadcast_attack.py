@@ -1,3 +1,20 @@
+"""
+Hastad's broadcast attack using Chinese Remainder Theorem.
+
+Category: Crypto > RSA
+
+Description:
+    When the same message is encrypted with small exponent e (typically e=3) to
+    multiple recipients with different moduli, CRT can be used to recover m^e,
+    then the e-th root gives the plaintext.
+
+Usage:
+    python hastad_broadcast_attack.py
+
+Dependencies:
+    - pycryptodome
+    - gmpy2
+"""
 from Crypto.Util.number import *
 from gmpy2 import iroot
 

@@ -1,3 +1,19 @@
+"""
+Z3 constraint solver template for flag recovery.
+
+Category: Reverse Engineering
+
+Description:
+    Z3 SMT solver template for solving constraint-based reverse engineering
+    challenges. Defines symbolic variables with charset constraints and
+    mathematical/logical constraints to find valid solutions.
+
+Usage:
+    python z3-temp.py
+
+Dependencies:
+    - z3-solver
+"""
 from z3 import *
 
 _b = [ BitVec(f'{i}', 8) for i in range(8) ]

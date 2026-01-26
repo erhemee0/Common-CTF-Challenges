@@ -1,3 +1,18 @@
+"""
+x64 buffer overflow offset finder using cyclic pattern.
+
+Category: Pwn > Buffer Overflow
+
+Description:
+    Automatically finds the offset to RIP/return address using pwntools
+    cyclic pattern and core dump analysis. Essential first step for BOF exploits.
+
+Usage:
+    python find-offset-64.py
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 elf = context.binary = ELF('challenge', checksec=False)

@@ -1,3 +1,19 @@
+"""
+x64 format string write techniques comparison.
+
+Category: Pwn > Format String
+
+Description:
+    Demonstrates two methods for format string writes: manual payload
+    construction vs pwntools fmtstr_payload helper. Useful reference for
+    understanding format string internals.
+
+Usage:
+    python fmt_write_methods.py
+
+Dependencies:
+    - pwntools
+"""
 # ============= METHOD 1 =============
 numbwritten = 1
 what = 0x2

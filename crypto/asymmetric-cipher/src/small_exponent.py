@@ -1,3 +1,19 @@
+"""
+RSA small exponent attack using repeated square roots.
+
+Category: Crypto > RSA
+
+Description:
+    When the public exponent e is small and a power of 2 (e.g., e=16), and we
+    know p and q, we can decrypt by taking repeated modular square roots using
+    the extended GCD method.
+
+Usage:
+    python small_exponent.py
+
+Dependencies:
+    - pycryptodome
+"""
 from Crypto.Util.number import long_to_bytes
 
 c = 3708354049649318175189820619077599798890688075815858391284996256924308912935262733471980964003143534200740113874286537588889431819703343015872364443921848

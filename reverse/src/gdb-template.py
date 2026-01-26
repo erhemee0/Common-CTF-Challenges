@@ -1,5 +1,21 @@
-# https://rce4fun.blogspot.com/2014/09/nonconname-2014-inbincible-reversing.html
-# to execute : gdb -x solve.py
+"""
+GDB automation template with breakpoint-based character validation.
+
+Category: Reverse Engineering
+
+Description:
+    GDB script template for brute-forcing flags character by character.
+    Uses breakpoints and stack inspection to detect correct characters.
+
+Usage:
+    gdb -x gdb-template.py
+
+Dependencies:
+    - gdb with Python support
+
+Reference:
+    https://rce4fun.blogspot.com/2014/09/nonconname-2014-inbincible-reversing.html
+"""
 import gdb
 
 charset = list("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!?_-@")

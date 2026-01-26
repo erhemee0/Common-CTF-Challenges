@@ -1,3 +1,19 @@
+"""
+Angr template for stdin-based challenges with charset constraints.
+
+Category: Reverse Engineering
+
+Description:
+    Advanced angr template for binaries reading from stdin. Adds printable
+    character constraints to symbolic variables and explores to success address.
+
+Usage:
+    python angr-temp-2.py
+
+Dependencies:
+    - angr
+    - claripy
+"""
 from angr import Project
 import claripy
 

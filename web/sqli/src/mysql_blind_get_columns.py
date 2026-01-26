@@ -1,5 +1,18 @@
-# MYSQL - Blind sqli
+"""
+MySQL blind SQLi to enumerate column names.
 
+Category: Web > SQL Injection
+
+Description:
+    Blind SQL injection script to extract column names from a specific table.
+    Queries information_schema.COLUMNS and extracts names character by character.
+
+Usage:
+    python mysql_blind_get_columns.py
+
+Dependencies:
+    - requests
+"""
 from requests import post
 from string import ascii_letters, digits
 

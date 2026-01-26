@@ -1,6 +1,18 @@
-# MYSQL - Blind sqli
-    # Get get all tables
+"""
+MySQL blind SQLi to enumerate table names.
 
+Category: Web > SQL Injection
+
+Description:
+    Blind SQL injection script to extract all table names from a database.
+    Queries information_schema.TABLES and extracts names character by character.
+
+Usage:
+    python mysql_blind_get_tables.py
+
+Dependencies:
+    - requests
+"""
 from requests import post
 from string import ascii_letters, digits
 

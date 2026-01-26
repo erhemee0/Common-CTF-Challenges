@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x32 return-to-libc using write() to leak addresses.
+
+Category: Pwn > ret2libc
+
+Description:
+    Classic ret2libc exploit that uses write() to leak libc address from GOT,
+    calculates libc base, then returns to system("/bin/sh").
+
+Usage:
+    python ret2libc_write.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or "level1")

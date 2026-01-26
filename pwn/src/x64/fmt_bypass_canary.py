@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 format string leak to bypass stack canary.
+
+Category: Pwn > Format String
+
+Description:
+    Uses format string vulnerability to leak stack canary and PIE base,
+    then performs ret2libc with the leaked values to bypass protections.
+
+Usage:
+    python fmt_bypass_canary.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or "chall")

@@ -1,3 +1,20 @@
+"""
+Recover QR code from blurry or partial image.
+
+Category: Forensics > Images
+
+Description:
+    Attempts to recover a valid QR code from a blurry image using brute-force
+    reconstruction with Gaussian blur comparison. Works by iteratively painting
+    pixels and checking which configuration minimizes the difference.
+
+Usage:
+    python recover_blurry_qr.py
+
+Dependencies:
+    - opencv-python (cv2)
+    - numpy
+"""
 import cv2 as cv
 import numpy as np
 

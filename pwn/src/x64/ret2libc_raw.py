@@ -1,3 +1,18 @@
+"""
+x64 raw return-to-libc without ROP helper.
+
+Category: Pwn > ret2libc
+
+Description:
+    Manual ret2libc exploit that leaks puts GOT to calculate libc base,
+    then returns to system with /bin/sh. Uses raw gadget addresses.
+
+Usage:
+    python ret2libc_raw.py
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 context.log_level = 'debug'

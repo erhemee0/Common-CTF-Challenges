@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x32 ROP chain to write /bin/sh and call execve syscall.
+
+Category: Pwn > ROP
+
+Description:
+    Uses ROP gadgets to write "/bin/sh" string to .data section, then
+    sets up registers for execve syscall (eax=0xb, ebx=&"/bin/sh").
+
+Usage:
+    python mov_str_flag_syscall.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or "simplerop")

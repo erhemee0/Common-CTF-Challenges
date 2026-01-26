@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 return-to-libc using pwntools ROP helper.
+
+Category: Pwn > ret2libc
+
+Description:
+    Clean ret2libc exploit using pwntools ROP class for chain building.
+    Two-stage attack: leak puts, return to main, then call system.
+
+Usage:
+    python ret2libc_rop.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF('vuln')

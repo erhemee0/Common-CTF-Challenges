@@ -1,3 +1,19 @@
+"""
+RSA Rabin cryptosystem attack when e=2.
+
+Category: Crypto > RSA
+
+Description:
+    When the public exponent e=2 (Rabin cryptosystem), decryption requires
+    computing modular square roots. This script uses the Tonelli-Shanks algorithm
+    to find square roots modulo p and q, then combines them using CRT.
+
+Usage:
+    python e_is_2.py
+
+Dependencies:
+    - pycryptodome
+"""
 from Crypto.Util.number import long_to_bytes
 
 def tonelli_shanks(n, p):

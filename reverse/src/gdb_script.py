@@ -1,6 +1,19 @@
 #!/usr/bin/env python3
-# use plain gdb
-# gdb -q -x x.py
+"""
+GDB script for register comparison-based flag extraction.
+
+Category: Reverse Engineering
+
+Description:
+    GDB Python script that brute-forces flag by comparing RDI and RSI register
+    values at a specific breakpoint. Continues until all characters are found.
+
+Usage:
+    gdb -q -x gdb_script.py
+
+Dependencies:
+    - gdb with Python support
+"""
 import gdb
 from string import *
 

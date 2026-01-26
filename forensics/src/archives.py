@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
+"""
+Recursive archive extractor for nested compression challenges.
 
+Category: Forensics
+
+Description:
+    Automatically detects and extracts nested archives of various formats.
+    Supports 7z, tar, gzip, bzip2, zip, rar, xz, arj, cab, ppmd, rzip, zoo,
+    arc, and kgb formats. Useful for CTF challenges with deeply nested archives.
+
+Usage:
+    python archives.py <archive_file>
+
+Dependencies:
+    - python-magic
+    - System tools: 7z, tar, gzip, unzip, unrar, etc.
+"""
 import os
 import magic
 from sys import argv

@@ -1,4 +1,21 @@
 #!/usr/bin/env python3
+"""
+x64 exploit leveraging predictable libc seed (srand/rand).
+
+Category: Pwn > PRNG
+
+Description:
+    Exploits predictable random number generation by replicating libc's
+    srand(time(NULL)) seed. Combines PRNG bypass with integer overflow
+    for stack buffer overflow to get shell.
+
+Usage:
+    python seed_libc.py [REMOTE]
+
+Dependencies:
+    - pwntools
+    - ctypes
+"""
 from pwn import *
 import ctypes
 

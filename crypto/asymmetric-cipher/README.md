@@ -26,7 +26,7 @@ Common attacks
 - `Big exponent`
   - **n** is too big then public exponent **e** must be small.
   - [Wiener's attack](https://github.com/ByamB4/CCC/blob/master/Cryptography/src/asymmetric-cipher/rsa/Wiener-Attack.py)
-  - [Boneh Durfee](https://someurl)
+  - [Boneh Durfee](https://github.com/mimoo/RSA-and-LLL-attacks/blob/master/boneh_durfee.sage)
 - `Hastad’s Broadcast Attack`
 
   - **e** cipher text, with same **message**.

@@ -1,3 +1,18 @@
+"""
+x32 heap exploitation with ret2win technique.
+
+Category: Pwn > Heap
+
+Description:
+    Heap exploitation using use-after-free to overwrite a function pointer
+    with address of win/magic function. Standard heap menu challenge pattern.
+
+Usage:
+    python heap_ret2win.py
+
+Dependencies:
+    - pwntools
+"""
 io = start()
 
 def create(_size: int, _content: str):

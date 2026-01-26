@@ -1,3 +1,19 @@
+"""
+RSA small exponent attack using Tonelli-Shanks algorithm.
+
+Category: Crypto > RSA
+
+Description:
+    When e is small (e.g., e=4) and N is prime, use Tonelli-Shanks to recursively
+    compute square roots until reaching the plaintext. Explores all possible
+    root combinations.
+
+Usage:
+    python small_exponent_tonelli.py
+
+Dependencies:
+    - pycryptodome
+"""
 from Crypto.Util.number import long_to_bytes
 
 n = 11183632493295722900188836927564142822637910363304123337597708503476804292242860556684644449701772313571249316546794463854991452685201761786385895405863639

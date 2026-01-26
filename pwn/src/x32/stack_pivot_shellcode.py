@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x32 stack pivot to execute shellcode.
+
+Category: Pwn > Stack Pivot
+
+Description:
+    Uses jmp esp gadget and stack pivot to execute inline shellcode.
+    Writes shellcode to stack, pivots execution to it using sub esp; call esp.
+
+Usage:
+    python stack_pivot_shellcode.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or 'ciscn_s_9')

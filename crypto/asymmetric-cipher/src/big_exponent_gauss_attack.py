@@ -1,3 +1,19 @@
+"""
+RSA attack when public exponent e is large using Gaussian lattice reduction.
+
+Category: Crypto > RSA
+
+Description:
+    When the public exponent e is very large (close to N), the private exponent d
+    becomes small. This script uses LLL lattice reduction to recover d and decrypt
+    the ciphertext.
+
+Usage:
+    python big_exponent_gauss_attack.py
+
+Dependencies:
+    - sagemath (for Matrix and LLL)
+"""
 from math import *
 from random import *
 

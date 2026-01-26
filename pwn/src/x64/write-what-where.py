@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 write-what-where primitive exploitation.
+
+Category: Pwn > Arbitrary Write
+
+Description:
+    Uses mov [rsi], rax gadget as write-what-where primitive to write
+    /bin/sh to BSS section, then calls execve via syscall ROP chain.
+
+Usage:
+    python write-what-where.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF('./vuln')

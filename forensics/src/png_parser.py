@@ -1,5 +1,20 @@
 #!/usr/bin/env python
+"""
+PNG chunk validator and corruption fixer.
 
+Category: Forensics > Images
+
+Description:
+    Parses PNG files, validates chunk structure, CRC checksums, and chunk types.
+    Suggests dd commands to fix corrupted headers, invalid chunk types, and CRC
+    errors. Essential for CTF challenges with corrupted PNG files.
+
+Usage:
+    python png_parser.py <corrupted.png>
+
+Dependencies:
+    - None (standard library only)
+"""
 import argparse
 import struct
 import difflib

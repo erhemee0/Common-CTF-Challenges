@@ -1,3 +1,19 @@
+"""
+Angr symbolic execution template with argv input.
+
+Category: Reverse Engineering
+
+Description:
+    Angr template for solving binaries that take command-line arguments.
+    Creates symbolic argv[1] and explores to find the correct input.
+
+Usage:
+    python angr-argv.py
+
+Dependencies:
+    - angr
+    - claripy
+"""
 import angr
 import claripy
 

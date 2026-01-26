@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x32 format string exploit to overwrite GOT entry.
+
+Category: Pwn > Format String
+
+Description:
+    Exploits a format string vulnerability to leak libc address and overwrite
+    printf GOT entry with system to get shell. Classic GOT overwrite technique.
+
+Usage:
+    python fs_overwrite_got.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or "axb_2019_fmt32")

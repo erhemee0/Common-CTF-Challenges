@@ -1,3 +1,23 @@
+"""
+PHP filter bypass via XOR obfuscation.
+
+Category: Web > PHP
+
+Description:
+    Generates XOR-obfuscated PHP code to bypass character filters. Converts
+    strings like "system" into XOR expressions using allowed characters,
+    useful when alphanumeric characters are blocked.
+
+Usage:
+    python bypass_filter.py
+
+Dependencies:
+    - None (standard library only)
+
+Example:
+    Input: ["system", "id"]
+    Output: ("system")("id")=('0'^'c')('1'^'x')... (XOR obfuscated)
+"""
 string_code = ["system", "id"]
 obfuscated_code = ""
 charset = "1234567890!#$%&'()*+/^,-.:;<=>?@[]_{|}~"

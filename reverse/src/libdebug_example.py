@@ -1,3 +1,18 @@
+"""
+libdebug debugging framework for SBOX extraction.
+
+Category: Reverse Engineering
+
+Description:
+    Uses libdebug to attach to a process and extract substitution box (SBOX)
+    values by reading memory at breakpoints. Reverses the SBOX to decode flag.
+
+Usage:
+    python libdebug_example.py
+
+Dependencies:
+    - libdebug
+"""
 import subprocess
 import time
 from libdebug import debugger

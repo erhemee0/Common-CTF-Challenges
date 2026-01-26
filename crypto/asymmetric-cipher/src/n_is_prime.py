@@ -1,3 +1,20 @@
+"""
+RSA edge case when N itself is prime.
+
+Category: Crypto > RSA
+
+Description:
+    In rare cases, the modulus N might be prime instead of a product of two primes.
+    When N is prime, phi(N) = N - 1, and decryption proceeds normally with this
+    adjusted totient.
+
+Usage:
+    python n_is_prime.py
+
+Dependencies:
+    - pycryptodome
+    - sympy
+"""
 from Crypto.Util.number import inverse, long_to_bytes
 from sympy import isprime
 

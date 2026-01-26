@@ -1,6 +1,18 @@
-# MYSQL - Blind sqli
-    # Get get all schemas
+"""
+MySQL blind SQLi to enumerate schema (database) names.
 
+Category: Web > SQL Injection
+
+Description:
+    Blind SQL injection script to extract all database/schema names.
+    Queries information_schema.SCHEMATA to enumerate available databases.
+
+Usage:
+    python mysql_get_schemas.py
+
+Dependencies:
+    - requests
+"""
 from requests import post
 from string import ascii_letters, digits
 

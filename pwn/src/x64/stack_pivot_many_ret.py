@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 stack pivot using multiple return gadgets.
+
+Category: Pwn > Stack Pivot
+
+Description:
+    Stack pivot exploit using leave;ret to move stack to BSS, then uses
+    multiple ret gadgets as sled before ROP chain. Uses one-gadget for shell.
+
+Usage:
+    python stack_pivot_many_ret.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or 'gyctf_2020_borrowstack')

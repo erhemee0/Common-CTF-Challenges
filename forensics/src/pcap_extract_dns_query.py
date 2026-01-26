@@ -1,3 +1,19 @@
+"""
+Extract DNS query names from PCAP file.
+
+Category: Forensics > Network
+
+Description:
+    Parses a PCAP file and extracts all DNS query names. Useful for CTF
+    challenges where data is exfiltrated via DNS queries or subdomains.
+
+Usage:
+    python pcap_extract_dns_query.py
+
+Dependencies:
+    - pyshark
+    - tshark (Wireshark CLI)
+"""
 import pyshark
 
 def extract_dns_requests(pcap_file):

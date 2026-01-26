@@ -1,5 +1,18 @@
-# MYSQL - Blind sqli
+"""
+MySQL blind SQLi to count records in table.
 
+Category: Web > SQL Injection
+
+Description:
+    Blind SQL injection script to determine the total number of records
+    in a table using COUNT(*) with boolean-based extraction.
+
+Usage:
+    python mysql_blind_get_total_record.py
+
+Dependencies:
+    - requests
+"""
 from requests import post
 
 class Attack:

@@ -1,3 +1,19 @@
+"""
+Race condition exploit template for web challenges.
+
+Category: Web > Race Condition
+
+Description:
+    Exploits TOCTOU (time-of-check to time-of-use) vulnerabilities in shopping
+    cart or checkout functionality. Sends concurrent requests to add products
+    and checkout, attempting to purchase expensive items at cheap prices.
+
+Usage:
+    python race_1.py
+
+Dependencies:
+    - requests
+"""
 from requests import post, delete
 import threading
 

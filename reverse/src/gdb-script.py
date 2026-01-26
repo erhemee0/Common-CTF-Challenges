@@ -1,3 +1,18 @@
+"""
+GDB Python script for automated flag brute-forcing.
+
+Category: Reverse Engineering
+
+Description:
+    Uses GDB's Python API to automate flag character-by-character extraction.
+    Sets breakpoints and compares register values to known success addresses.
+
+Usage:
+    gdb -x gdb-script.py
+
+Dependencies:
+    - gdb with Python support
+"""
 import gdb, string
 
 gdb.execute("file ./challenge")

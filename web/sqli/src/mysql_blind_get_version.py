@@ -1,6 +1,18 @@
-# MYSQL - Blind sqli
-    # Get version
+"""
+MySQL blind SQLi to extract database version.
 
+Category: Web > SQL Injection
+
+Description:
+    Blind SQL injection script to extract MySQL version character by character.
+    Uses boolean-based blind technique with response length as oracle.
+
+Usage:
+    python mysql_blind_get_version.py
+
+Dependencies:
+    - requests
+"""
 from requests import post
 from string import digits
 

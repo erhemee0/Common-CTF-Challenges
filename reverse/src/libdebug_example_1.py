@@ -1,3 +1,20 @@
+"""
+libdebug with pwntools for XMM register SBOX extraction.
+
+Category: Reverse Engineering
+
+Description:
+    Combines pwntools process management with libdebug debugging to extract
+    SBOX mappings from XMM registers. Useful for SIMD-based obfuscation.
+
+Usage:
+    python libdebug_example_1.py
+
+Dependencies:
+    - pwntools
+    - libdebug
+    - numpy
+"""
 from pwn import *
 from libdebug import debugger
 import numpy as np

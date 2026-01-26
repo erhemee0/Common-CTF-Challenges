@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 exploit with seccomp sandbox bypass using ORW (open-read-write).
+
+Category: Pwn > Seccomp
+
+Description:
+    When execve is blocked by seccomp, use open/read/write syscalls to
+    read the flag file directly. Uses shellcraft for clean shellcode generation.
+
+Usage:
+    python seccomp.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+    - seccomp-tools (for analysis)
+"""
 from pwn import *
 
 exe = context.binary = ELF('orw')

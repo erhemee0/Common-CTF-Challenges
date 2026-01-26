@@ -1,5 +1,18 @@
-# MYSQL - Blind sqli
+"""
+MySQL blind SQLi to extract record values.
 
+Category: Web > SQL Injection
+
+Description:
+    Blind SQL injection script to extract actual data from table records.
+    Iterates through rows and extracts column values character by character.
+
+Usage:
+    python mysql_blind_get_record.py
+
+Dependencies:
+    - requests
+"""
 from requests import post
 from string import ascii_letters, digits
 

@@ -1,3 +1,18 @@
+"""
+Z3 constraint solver for complex flag recovery with printable charset.
+
+Category: Reverse Engineering
+
+Description:
+    Advanced Z3 example with multiple mathematical constraints and flag format
+    validation. Adds printable ASCII constraints and solves for flag characters.
+
+Usage:
+    python z3-example-2.py
+
+Dependencies:
+    - z3-solver
+"""
 from z3 import *
 
 s = []

@@ -1,5 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 Sigreturn-Oriented Programming (SROP) to call execve.
+
+Category: Pwn > SROP
+
+Description:
+    Uses SROP technique to set up registers for execve syscall via
+    SigreturnFrame. Two-stage attack: first read /bin/sh to memory,
+    then trigger execve with controlled registers.
+
+Usage:
+    python srop_execve.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or 'ciscn_2019_es_7')

@@ -1,3 +1,18 @@
+"""
+Hastad's broadcast attack with manual CRT implementation.
+
+Category: Crypto > RSA
+
+Description:
+    Alternative implementation of Hastad's broadcast attack with custom CRT
+    and modular inverse functions. Useful when gmpy2 is not available.
+
+Usage:
+    python hastad_broadcast_attack_crt.py
+
+Dependencies:
+    - pycryptodome
+"""
 from Crypto.Util.number import long_to_bytes as ltb
 
 e = 0x3

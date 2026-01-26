@@ -1,5 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+x64 stack pivot with direct syscall for execve.
+
+Category: Pwn > Stack Pivot
+
+Description:
+    Stack pivot exploit that moves stack to writable section, writes /bin/sh,
+    then sets up registers for execve syscall (rax=59, rdi=&"/bin/sh").
+
+Usage:
+    python stack_pivot_syscall.py [LOCAL|REMOTE]
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 exe = context.binary = ELF(args.EXE or 'pwn3')

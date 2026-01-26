@@ -1,3 +1,18 @@
+"""
+Basic angr symbolic execution with stdout oracle.
+
+Category: Reverse Engineering
+
+Description:
+    Simple angr template that explores execution paths looking for specific
+    output strings. Finds input that produces "CORRECT" while avoiding "WRONG".
+
+Usage:
+    python angr_simple.py
+
+Dependencies:
+    - angr
+"""
 import angr
 
 p = angr.Project('./filename', auto_load_libs=False)

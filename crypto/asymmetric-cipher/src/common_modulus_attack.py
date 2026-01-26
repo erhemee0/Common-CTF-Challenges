@@ -1,3 +1,20 @@
+"""
+RSA common modulus attack when same message encrypted with different exponents.
+
+Category: Crypto > RSA
+
+Description:
+    When the same plaintext is encrypted with the same modulus N but different
+    public exponents e1 and e2 (where gcd(e1, e2) = 1), the plaintext can be
+    recovered without knowing the private key.
+
+Usage:
+    python common_modulus_attack.py
+
+Dependencies:
+    - pycryptodome
+    - gmpy2
+"""
 from Crypto.Util.number import long_to_bytes, inverse
 from gmpy2 import gcdext
 

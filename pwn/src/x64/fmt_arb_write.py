@@ -1,4 +1,19 @@
 #!/usr/bin/env python3
+"""
+x64 format string arbitrary write primitive.
+
+Category: Pwn > Format String
+
+Description:
+    Advanced format string exploit with arbitrary write capability. Overwrites
+    GOT entries to redirect execution flow and uses one-gadget for shell.
+
+Usage:
+    python fmt_arb_write.py
+
+Dependencies:
+    - pwntools
+"""
 from pwn import *
 
 context.encoding = "latin"
