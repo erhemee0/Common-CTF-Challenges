@@ -6,7 +6,6 @@ Reference notes, commands, and ready-to-use snippets for Capture the Flag compet
 
 - [Categories](#categories)
 - [Quick Start](#quick-start)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
 
@@ -38,14 +37,6 @@ Reference notes, commands, and ready-to-use snippets for Capture the Flag compet
 git clone https://github.com/ByamB4/Common-CTF-Challenges.git
 cd Common-CTF-Challenges
 
-# Create virtual environment (recommended)
-python3 -m venv .venv
-source .venv/bin/activate  # Linux/macOS
-# .venv\Scripts\activate   # Windows
-
-# Install all dependencies
-pip install -r requirements.txt
-
 # Search for keywords
 grep -r "pickle" .
 grep -r "sql" web/
@@ -53,44 +44,6 @@ grep -r "sql" web/
 # Or use ripgrep (faster)
 rg -n "pickle"
 rg -n "sql" web/
-```
-
-## Installation
-
-### Full Installation (all tools)
-```bash
-pip install -r requirements.txt
-```
-
-### Category-Specific Installation
-
-```bash
-# Crypto only
-pip install -r crypto/asymmetric-cipher/src/requirements.txt
-
-# Pwn only
-pip install -r pwn/src/requirements.txt
-
-# Reverse engineering only
-pip install -r reverse/src/requirements.txt
-
-# Forensics only
-pip install -r forensics/src/requirements.txt
-
-# Network only
-pip install -r network/requirements.txt
-```
-
-### System Dependencies
-
-Some tools require additional system packages:
-
-```bash
-# Debian/Ubuntu
-sudo apt install libmagic1 tshark
-
-# macOS
-brew install libmagic wireshark
 ```
 
 ## Usage
@@ -159,7 +112,6 @@ Common-CTF-Challenges/
 ├── network/
 │   ├── README.md           # Network attacks
 │   └── mitm.py             # ARP spoofing script
-├── requirements.txt        # Global dependencies
 └── CONTRIBUTING.md         # Contribution guide
 ```
 

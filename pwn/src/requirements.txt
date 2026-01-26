@@ -1,2 +1,0 @@
-# Pwn Dependencies
-pwntools>=4.11.0

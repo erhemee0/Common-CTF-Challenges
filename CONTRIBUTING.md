@@ -9,8 +9,7 @@ Thank you for your interest in contributing to this CTF reference repository!
 #### Scripts
 1. Place scripts in the appropriate `category/src/` directory
 2. Include a module-level docstring (see template below)
-3. Add dependencies to the category's `requirements.txt`
-4. Test your script before submitting
+3. Test your script before submitting
 
 #### Documentation
 1. Update or create README.md files in the relevant category
@@ -59,7 +58,6 @@ Example:
 ```
 category/
 ├── README.md           # Category cheatsheet
-├── requirements.txt    # Dependencies (if applicable)
 └── src/
     └── script.py       # Exploit/tool scripts
 ```
@@ -117,7 +115,6 @@ category/
 Before submitting:
 
 - [ ] Scripts run without errors
-- [ ] Dependencies are documented
 - [ ] Docstrings explain usage
 - [ ] Examples use safe placeholder values
 - [ ] No sensitive information included
